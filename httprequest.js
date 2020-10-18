@@ -30,3 +30,23 @@ function listar(){
 $(document).ready(function(){
     listar();
 });
+
+//Insere um novo Pokémon
+function inserir(){
+    httpRequest('POST', 'https://pokedex-restapi.herokuapp.com/pokemon').then(
+        $(".insert-pokemon-form").append("<h1>Teste</h1>")
+    );
+    listar();
+}
+
+function alterar(){
+    httpRequest('PUT', '');
+}
+
+function remover(){
+    httpRequest('DELETE', '');
+}
+
+function teste(){
+    console.log("Funcionou");
+}
